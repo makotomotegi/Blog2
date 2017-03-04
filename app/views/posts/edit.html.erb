@@ -1,5 +1,5 @@
-<h1>新しい投稿</h1>
-<%= form_for :post, url: posts_path do |f| %>
+<h1>投稿を更新</h1>
+<%= form_for :post, url: posts_path, method: :patch do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= @post.errors.count %>件のエラーが発生したため保存ができませんでした。</h2>

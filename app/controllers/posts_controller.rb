@@ -15,14 +15,30 @@ class PostsController < ApplicationController
 
   end
   # GET /posts/:id
-    def show
+  def show
+      @post = Post.find(params[:id])
+  end
+
+  # GET /posts/:id/edit
+  def edit
       @post = Post.find(params[:id])
   end
 
   # GET /posts
-    def index
+  def index
       @posts = Post.all
   end
+
+  # PATCH /posts/:id
+  # PUT   /posts/:id
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end  
 
   private
     def post_params
