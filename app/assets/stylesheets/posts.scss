@@ -1,3 +1,27 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common.scss";
+
+.posts {
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    font-size: 110%;
+    border-bottom: 1px dotted $baseLightBlue;
+  }
+
+  .post_info {
+    padding: 20px 5px;
+    margin-bottom: 30px;
+
+    background-color: $baseLightGray;
+    border-radius: 5px;
+
+    strong {
+      font-size: 110%;
+    }
+  }
+}
+
